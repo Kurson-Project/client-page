@@ -12,8 +12,8 @@ This is a modern web application built with:
 
 The repository is organized into two main folders:
 ```
-├── home-page/ # Public-facing home page
-├── dashboard/ # Dashboard section (role-based)
+├── HomePage/ # Public-facing home page
+├── Dashboard/ # Dashboard section (role-based)
 │ ├── user/ # User dashboard
 │ ├── admin/ # Admin dashboard
 └ └── mentor/ # Mentor dashboard
