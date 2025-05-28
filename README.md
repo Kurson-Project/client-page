@@ -31,7 +31,7 @@ The repository is organized into two main folders:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/username/repo-name.git
+https://github.com/Kurson-Project/client-page.git
 cd repo-name
 ```
 
