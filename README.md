@@ -11,6 +11,7 @@ This is a modern web application built with:
 ## 📁 Project Structure
 
 The repository is organized into two main folders:
+
 ├── home-page/ # Public-facing home page
 ├── dashboard/ # Dashboard section (role-based)
 │ ├── user/ # User dashboard
