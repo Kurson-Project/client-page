@@ -6,6 +6,7 @@ export type UserType = {
   id?: string;
   username?: string;
   email?: string;
+  avatar?: string;
   role?: "user" | "mentor" | "admin";
   createdAt?: string;
   updatedAt?: string;

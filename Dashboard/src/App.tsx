@@ -3,16 +3,16 @@ import UsersRoute from "./routers/UsersRoute"
 import LoginPage from "./pages/auth/LoginPage"
 import MentorRoute from "./routers/MentorRoute"
 import AdminRoute from "./routers/AdminRoute"
-import { useAuth } from "./context/AuthContext"
+// import { useAuth } from "./context/AuthContext"
 
 const App = () => {
-  const { user, loading } = useAuth();
+  // const { user, loading } = useAuth();
 
-  console.log(user);
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  const user = { role: "user" };
 
 
   if (user?.role === "user") {

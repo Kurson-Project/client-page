@@ -14,7 +14,6 @@ import InnerAnimation from "./components/template/animated/InnerAnimation"
 import FAQPage from "./pages/home/FAQPage"
 import KebijakanPrivasi from "./pages/home/KebijakanPrivasiPage"
 import SyaratKetentuanPage from "./pages/home/SyaratKetentuanPage"
-import { useAuth } from "./context/AuthContext"
 
 
 const MainLayout = () => {
@@ -38,17 +37,6 @@ const AuthLayout = () => {
 
 const App = () => {
   const location = useLocation()
-
-  const { loading } = useAuth()
-
-  if (loading) return (
-    <div className="w-full h-screen flex items-center justify-center bg-transparent">
-      <div className="relative w-fit h-fit">
-        <h1 className="text-res-4xl font-bold text-center text-blue-500">Lumino</h1>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full blur-2xl bg-primary rounded-full"></div>
-      </div>
-    </div>
-  )
 
   return (
     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">

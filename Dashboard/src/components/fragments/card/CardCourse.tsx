@@ -12,7 +12,7 @@ const CardCourse = ({ id, title, subtitle, image, price, rating, count, }: Cours
         return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(price);
     }
     return (
-        <Card onClick={() => navigate(`/course/${id}`)} className="group justify-between h-full flex flex-col cursor-pointer overflow-hidden">
+        <Card onClick={() => navigate(`/course/${id}`)} className="group justify-between h-full flex flex-col cursor-pointer overflow-hidden hover:translate-y-[-1px] transition-all duration-300">
             <CardHeader>
                 <div className="w-full h-full overflow-hidden rounded-lg">
                     <img src={image} alt="hero" className="rounded-lg aspect-video object-cover group-hover:scale-105 transition-all duration-300" />

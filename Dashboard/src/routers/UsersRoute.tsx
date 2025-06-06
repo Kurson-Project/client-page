@@ -1,13 +1,14 @@
 import AppNavbar from "@/components/layout/AppNavbar"
 import AppSidebar from "@/components/layout/AppSidebar"
 import { SidebarProvider } from "@/components/ui/sidebar"
-import { UserCoursePage, UserDetailCoursePage } from "@/pages/users/UserCoursePage"
+import { UserCoursePage, UserDetailCoursePage, UserYourCourseViewPage } from "@/pages/users/UserCoursePage"
 import UsersPage from "@/pages/users/UsersPage"
 import { Outlet, Route, Routes } from "react-router-dom"
 import { pathUserRoute } from "./PathRoute"
-import { UserYourCourseViewPage, UserYourCoursePage } from "@/pages/users/UserYourCoursePage"
 import UserDiscussionPage from "@/pages/users/UserDiscussionPage"
 import UserSettingsPage from "@/pages/users/UserSettingsPage"
+import AllCoursesCard from "@/components/layout/AllCoursesCard"
+import SubscriptionSection from "@/components/layout/users/SubscriptionSection"
 
 const UsersLayout = () => {
     return (
@@ -28,12 +29,14 @@ const UsersRoute = () => {
         <Routes>
             <Route path="/" element={<UsersLayout />}>
                 <Route index element={<UsersPage />} />
-                <Route path="courses" element={<UserCoursePage />} />
+                <Route path="course" element={<UserCoursePage />} />
+                <Route path="course/all" element={<AllCoursesCard />} />
                 <Route path="course/:id" element={<UserDetailCoursePage />} />
-                <Route path="your-course" element={<UserYourCoursePage />} />
-                <Route path="your-course/:id" element={<UserYourCourseViewPage />} />
+                <Route path="course/your-course/:id" element={<UserYourCourseViewPage />} />
                 <Route path="discussions" element={<UserDiscussionPage />} />
                 <Route path="settings" element={<UserSettingsPage />} />
+
+                <Route path="subscribe" element={<SubscriptionSection />} />
 
                 <Route path="*" element={<h1>404</h1>} />
             </Route>

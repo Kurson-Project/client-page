@@ -22,15 +22,7 @@ const UserDiscussionPage = () => {
     if (loading) {
         return <SkeletonUsersPage />;
     }
-
-    if (!courses || courses.length === 0) {
-        return (
-            <div className="w-full h-full flex items-center justify-center">
-                <h1 className="text-2xl font-bold">You don't have any course</h1>
-            </div>
-        );
-    }
-
+    
     return (
         <>
             <section className="w-full h-full flex gap-2">
